@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="CSS JS.css">
+    </head>
+    <body>
+
+        <h2>Zapremina valjka</h2>
+
+        <h4>V = r2 * π * H</h4>
+
+        <p>r2 = poluprecnik osnove valjka</p> 
+        <p>H = visina valjka</p> 
+        <p>π  (konstanta) = 3,14</p>
+
+     <div class="form_1">
+
+          <label> poluprecnik osnove valjka (r2): </label>
+          <br>
+          <input  id="pov" type="number" onchange="math()" >
+          <br>
+
+          <label > visina valjka (H): </label>
+          <br>
+          <input id="vv" type="number" onchange="math()" >
+          <br>
+
+          <br>
+          <label>Zapremina (V): </label>
+          <br>
+          <input id="Zapremina" type="number" disabled value="3.1415926535898">
+          <br>
+
+      </div>
+
+     <script>
+     function math() {
+      var pov = document.getElementById("pov").value;
+      var vv = document.getElementById("vv").value;
+      var Zapremina = document.getElementById("Zapremina");
+      Zapremina.value = Math.PI*pov*pov*vv;
+    }
+  </script>
+
+    </body>
+</html>
